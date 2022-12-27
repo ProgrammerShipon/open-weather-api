@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Open Weather </title>
+  <!-- Tailwind css -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="">
+    <div class="flex w-screen mx-auto">
+      <div class="web-view flex-initial w-1/2 h-screen flex justify-center flex-col items-center leading-8">
+        <img src="./openWeather.png" alt="openWeather">
+        <h1> Open Weather API </h1>
+        <P> Enter Your City, Check Your Weather Instantly </P>
+      </div>
+      <div class="web-history flex-initial w-1/2">
+        <div class="current-location w-full text-center flex flex-col justify-start items-center h-screen">
+          <p class="">
+            <img class="mx-auto" id="condition-img" src="https://openweathermap.org/img/w/03d.png">
+            <strong>
+              <span id="city-name"> Dhaka </span> , 
+              <span id="country-name"> BD </span>
+            </strong><br>
+            <strong>
+              <span id="main"> Cloud </span>
+              <span id=""> 32 </span>
+            </strong>
+            ( <span id="description"> Scattered Cloud </span> ) <br>
+            TEMP : <strong><span id="temp"> 32 </span></strong>,
+            pressure : <strong><span id="pressure"> 1032 </span></strong>,
+            HUMIDITY : <strong><span id="humidity"> 75 </span></strong>
+          </p>
+          <input type="text" id="city-input" placeholder="Enter Your City Name..." class="mt-7 block w-1/2 px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+          focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+          disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+          invalid:border-pink-500 invalid:text-pink-600
+          focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
+          <small> After Enterning a Valid City Name Please Press Enter to <br> Get Result </small>
+
+          <h5 class="my-5"> Recently Searched Result </h5>
+
+          <div class="my-5" id="history">
+          </div>
+
+          <div id="master-history" class="flex justify-center w-11/12">
+            <div class="block p-4 rounded-lg shadow-lg bg-white w-11/12">
+              <div class="flex w-full">
+                <div class="w-32">
+                  <img src="https://openweathermap.org/img/w/03d.png" class="condition w-full" alt="">
+                </div>
+                <div class="text-left w-auto leading-7 pl-4">
+                  <p>
+                    <strong>
+                      <span class="city"> Dhaka </span>, 
+                      <span class="country"> BD </span>
+                    </strong><br>
+                    <strong>
+                      <span class="main"> Cloud </span>
+                    </strong>
+                    ( <span class="description"> Scattered Cloud </span> ) <br>
+                    TEMPARATURE : <strong><span id="temp"> 32 </span></strong> <br>
+                    PRESSURE : <strong><span id="pressure"> 1032 </span></strong>,
+                    HUMIDITY : <strong><span id="humidity"> 75 </span></strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+
+</html>
+
+<!-- $ npm i req-error -->

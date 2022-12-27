@@ -1,0 +1,12 @@
+.web-view {
+  background: #7d1640;
+  color: #d1d1d1;
+}
+
+.current-location {
+  background: #ff7a09;
+}
+
+#master-history {
+  display: none;
+}
